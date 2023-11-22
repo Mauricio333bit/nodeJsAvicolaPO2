@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+
+    <title>Avicola | Clientes</title>
+    <link rel="icon" href="../assets/img/gallinaIcon.png" type="image/x-icon" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../assets/css/base/base.css" />
+    <link rel="stylesheet" href="../assets/css/componentes/header.css" />
+    <link rel="stylesheet" href="../assets/css/lista_cliente.css" />
+    <link rel="stylesheet" href="../assets/css/componentes/table.css" />
+    <link rel="stylesheet" href="../assets/css/componentes/button.css" />
+    <link rel="stylesheet" href="../assets/css/componentes/modal.css" />
+  </head>
+  <body>
+    <header class="header container">
+      <img
+        class="header__logos"
+        src="../assets/img/gallinaIcon.png"
+        alt="Logotipo avicola"
+      />
+
+      <nav class="col-8">
+        <ul class="header__list-nav">
+          <li><a class="header__link" href="#">Inicio</a></li>
+          <li>
+            <a class="header__link" href="/lista_producto">Productos</a>
+          </li>
+          <li>
+            <a class="header__link" href="/lista_cliente">Clientes</a>
+          </li>
+          <li><a class="header__link" href="#">Ventas</a></li>
+        </ul>
+      </nav>
+      <img
+        src="../assets/img/admin.png"
+        alt="Logotipo Admin"
+        class="header__logos"
+      />
+    </header>
+
+    <main class="clientes-container">
+      <table class="table">
+        <thead class="text-center">
+          <tr>
+            <th class="table__column--p">Nombre</th>
+            <th class="table__column--p">Telefono</th>
+            <th class="table__column--p">Email</th>
+            <th class="table__column--p">DNI</th>
+
+            <th class="table__column--m table__align--right">
+              <a
+                href="/registrar_cliente"
+                class="simple-button simple-button--add btn d-block"
+                >Nuevo Cliente</a
+              >
+            </th>
+          </tr>
+        </thead>
+        <tbody data-table class="text-center"></tbody>
+        <!-- elemento que selecccionamos como table en client-controller -->
+      </table>
+      <div class="modal-container modal--close">
+        <article class="modal">
+          <h2 class="modal__title">Eliminar</h2>
+          <button class="modal__close">X</button>
+          <p class="modal__text">¿Deseas continuar?</p>
+          <div class="modal__button-container">
+            <button class="modal__button modal__button--confirm">
+              Eliminar
+            </button>
+            <button class="modal__button">No eliminar</button>
+          </div>
+        </article>
+      </div>
+    </main>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="../client-controllers.js" type="module"></script>
+  </body>
+</html>

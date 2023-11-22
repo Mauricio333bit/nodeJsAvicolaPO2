@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Avicola | Seccion Clientes</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <link rel="icon" href="../assets/img/gallinaIcon.png" type="image/x-icon" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../assets/css/base/base.css" />
+    <link rel="stylesheet" href="../assets/css/componentes/header.css" />
+    <link rel="stylesheet" href="../assets/css/componentes/card.css" />
+    <link rel="stylesheet" href="../assets/css/register_client.css" />
+    <link rel="stylesheet" href="../assets/css/componentes/inputs.css" />
+    <link rel="stylesheet" href="../assets/css/componentes/button.css" />
+  </head>
+  <body>
+    <header class="header container">
+      <img
+        class="header__logos"
+        src="../assets/img/gallinaIcon.png"
+        alt="Logotipo avicola"
+      />
+
+      <nav class="col-8">
+        <ul class="header__list-nav">
+          <li><a class="header__link" href="#">Inicio</a></li>
+          <li>
+            <a class="header__link" href="/lista_producto">Productos</a>
+          </li>
+          <li>
+            <a class="header__link" href="/lista_cliente">Clientes</a>
+          </li>
+          <li><a class="header__link" href="#">Ventas</a></li>
+        </ul>
+      </nav>
+      <img
+        src="../assets/img/admin.png"
+        alt="Logotipo Admin"
+        class="header__logos"
+      />
+    </header>
+    <main class="container flex flex--center flex--column">
+      <section class="card cadastro">
+        <h1 class="card__title">Nuevo Cliente</h1>
+        <form
+          action="/registrar_cliente"
+          method="post"
+          class="flex flex--column"
+          data-form
+        >
+          <div class="input-container">
+            <input
+              name="nombre"
+              id="nombre"
+              class="input"
+              type="text"
+              placeholder="Nombre"
+              required
+              data-nombre
+            />
+            <label class="input-label" for="nombre">Nombre</label>
+            <span class="input-menssage-error">Este campo es requerido</span>
+          </div>
+          <div class="input-container">
+            <input
+              name="telefono"
+              id="telefono"
+              class="input"
+              type="text"
+              placeholder="Numero telefonico"
+              required
+              data-telefono
+            />
+            <label class="input-label" for="telefono">Número telefonico</label>
+            <span class="input-menssage-error">Este campo es requerido</span>
+          </div>
+
+          <div class="input-container">
+            <input
+              name="email"
+              id="email"
+              class="input"
+              type="text"
+              placeholder="email"
+              required
+              data-email
+            />
+            <label class="input-label" for="email">Email</label>
+            <span class="input-menssage-error">Este campo es requerido</span>
+          </div>
+          <div class="input-container">
+            <input
+              name="dni"
+              id="dni"
+              class="input"
+              type="text"
+              placeholder="Numero Identificador"
+              required
+              data-dni
+            />
+            <label class="input-label" for="dni">DNI</label>
+            <span class="input-menssage-error">Este campo es requerido</span>
+          </div>
+
+          <button type="submit" class="button">Registrar</button>
+        </form>
+      </section>
+    </main>
+  </body>
+</html>
