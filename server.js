@@ -12,6 +12,10 @@ app.use(express.urlencoded({ extended: false }));
 
 //const itemsJson = require("./archivosPersistencia/db.json"); //obtengo los objetos guardados en el json, clientes y productos por ahora
 
+app.get("/", (request, response) => {
+  response.sendFile(path.join(__dirname, "/index.html"));
+});
+
 // Ruta para obtener la lista de clientes
 app.get("/clientes", (req, res) => {
   res.json(Controller.obtener().clientes); //envio una respuesta con los clientes que retorna el metodo, la respuesta es en formato json
